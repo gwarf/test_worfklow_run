@@ -11,3 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: env
+
+      - name: Save PR number
+        run: |
+          mkdir -p public/
+          echo ${{ github.event.number }} > ./public/PR
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr
+          path: public/
