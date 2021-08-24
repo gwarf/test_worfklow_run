@@ -2,9 +2,9 @@
 name: Preflight
 
 on:
-  - pull_request:
+  pull_request:
     types: [labeled, opened, synchronize]
-  - push
+  push:
 
 jobs:
   preflight-job:
