@@ -4,6 +4,7 @@ name: Preflight
 on:
   - pull_request
     types: [labeled, opened, synchronize]
+  - push
 
 jobs:
   preflight-job:
